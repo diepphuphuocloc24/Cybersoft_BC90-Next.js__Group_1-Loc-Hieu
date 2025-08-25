@@ -1,0 +1,9 @@
+/* GLOBAL ALL PAGE */
+* {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(117 118 147 / var(--tw-text-opacity));
+}
