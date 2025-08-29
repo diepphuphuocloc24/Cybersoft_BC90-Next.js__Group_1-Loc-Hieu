@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/favicon.ico">
     <title>BT Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate</title>
+    <meta name="description" content="This is Home for Solid Pro">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" sizes="16x16">
+    <meta name="next-size-adjust">
 
     <!-- TAILWIND CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- FLOWBITE CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"> -->
 
 
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- GOOGLE FONT INTER -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,118 +28,168 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- FLATICON ICON CSS -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/styleNextjs.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <header class="bg-white fixed shadow w-full z-20 top-0 start-0 border-b border-gray-200">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./img/logo-light.svg" alt="">
+    <header id="main-header"
+        class="w-full left-0 top-0 z-10 fixed bg-white transition-all duration-200 xl:py-9 sm:py-6">
+        <div class="flex sm:flex-wrap xl:flex-nowrap items-center justify-between mx-auto px-4 md:px-8 2xl:px-0">
+            <a href="#">
+                <img src="./img/logo-light.svg" alt="Main Logo">
             </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <div class="flex items-center justify-between">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <img src="./img/icon-moon.svg" alt="">
-                    <button type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign
-                        Up</button>
-                </div>
 
-                <!-- SIDE NAVBAR -->
-                <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <!-- NAVBAR -->
+            <div class="lg:flex justify-between items-center hidden w-full lg:w-auto sm:order-2" id="navbar-cta">
                 <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mr-48">
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                        <a href=" #"
+                            class="block py-2 px-3 ml-[8px] rounded-sm md:text-blue-500 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:text-blue-500 duration-[0.5s]"
                             aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Features</a>
+                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Features</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blogs</a>
+                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Blog</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Docs</a>
+                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Docs</a>
                     </li>
-                    <li>
+                    <li class="relative">
                         <!-- DROPDOWN -->
                         <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
                             data-dropdown-trigger="hover"
-                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6" type="button">Dropdown hover <svg
-                                    class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg>
+                            class="flex items-center justify-between w-full py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent duration-[0.5s]">
+                            Pages
+                            <i class="fa-solid fa-chevron-down text-[10px] ml-3"></i>
                         </button>
 
                         <!-- Dropdown menu -->
                         <div id="dropdownHover"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownHoverButton">
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Blog
-                                        Grid</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                        In</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                        Up</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Docs</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">404</a>
-                                </li>
+                            class="absolute left-[2.5rem] top-[-0.375rem] mt-2 z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-62 dark:bg-gray-700 animate__animated animate__fadeInUp">
+                            <ul class="py-2 text-sm" aria-labelledby="dropdownHoverButton">
+                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Blog Grid</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Sign In</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Sign Up</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Docs</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Support</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">404</a></li>
                             </ul>
                         </div>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Support</a>
+                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Support</a>
                     </li>
                 </ul>
+
+                <div class="flex md:order-2 space-x-3 md:space-x-0 md:flex rtl:space-x-reverse">
+                    <ul class="flex items-center justify-between font-medium text-regular">
+                        <li class="ml-7"><i class="fa-solid fa-magnifying-glass text-1xl"></i></li>
+                        <li class="ml-7"><img src="./img/icon-moon.svg" alt=""></li>
+                        <li class="ml-7 hover:text-blue-500 duration-[0.5s] text-1xl"><a
+                                href="https://solid.nextjstemplates.com/auth/signin">Sign
+                                In</a>
+                        </li>
+                        <li class="ml-7"><a href="./https://solid.nextjstemplates.com/auth/signup"
+                                class="text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full px-7.5 py-3 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 duration-[0.5s]">Sign
+                                Up</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex xl:hidden sm:order-1 space-x-3 sm:space-x-0 rtl:space-x-reverse ">
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <i class="fa-solid fa-bars text-[20px] text-black"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- BANNER -->
-    <section class="banner"></section>
+    <section class="banner overflow-hidden">
+        <div
+            class="lg:flex items-center justify-between mx-auto sm:px-4 md:px-8 xl:px-4 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 max-w-[1320px]">
+            <div class="banner_left xl:w-[51%]">
+                <div class="title">
+                    <h2 class="mb-4.5 text-lg font-medium text-black md:w-[50%] lg:w-full">
+                        🔥 Solid - A Complete SaaS Starter Template for SaaS
+                    </h2>
+                    <h1
+                        class="md:w-[50%] lg:w-full xl:w-[85%] mb-5 pr-16 tracking-wide xl:text-[44px] sm:text-3xl xl:leading-[58px] font-bold text-[rgb(24,28,49)] dark:text-white xl:text-hero">
+                        Robust SaaS
+                        Boilerplate and Starter
+                        for
+                        <span
+                            class="relative inline-block z-1 relative z-[1] after:content-[''] after:absolute after:left-0 after:bottom-[10px] after:w-full after:h-[10px] after:bg-[#adfff8] after:opacity-100 after:z-[-1]">
+                            Next.js
+                        </span>
+                    </h1>
+                    <p class="sm:w-full md:w-[48%] lg:w-[90%] xl:w-[90%]">Packed with all the key integrations you need
+                        for swift
+                        SaaS
+                        startup launch,
+                        including -
+                        Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More.
+                        Built-winth - Next.js, React 18 and TypeScript.</p>
+                </div>
+                <a href="https://solid.nextjstemplates.com/auth/signup"
+                    class="inline-block rounded-full bg-gray-800 px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-gray-700 dark:bg-btndark dark:hover:bg-blackho mt-10">
+                    Get Started
+                </a>
+            </div>
+            <div class="banner__right flex relative lg:w-[150%] xl:w-[45%] sm:hidden lg:block">
+                <img src=" ./img/shape-01.png" class="w-[46px] h-auto object-contain absolute top-0 -left-12" alt="">
+                <img src="./img/hero-light.svg" class="shadow-[0_0_200px_0.1px_rgba(0,0,0,0.1)]" width="100%"
+                    height="100%" alt="">
+                <img src="./img/shape-02.svg" class="absolute bottom-0 right-0" alt="">
+                <img src="./img/shape-03.svg" class="absolute bottom-0 -right-6" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND -->
+    <section
+        class="brand border border-gray-100 border-y-stroke bg-alabaster py-8 dark:border-y-strokedark dark:bg-black">
+        <div class="md:flex items-center justify-between mx-auto px-4 md:px-8 xl:px-4 max-w-[1320px]
+            sm:grid sm:grid-cols-3 sm:gap-4 sm:text-center">
+            <a href="#"><img
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s" src="./img/brand-light-01.svg" alt=""></a>
+            <a href="#"><img
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.3s" src="./img/brand-light-02.svg" alt=""></a>
+            <a href="#"><img
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.4s" src="./img/brand-light-03.svg" alt=""></a>
+            <a href="#"><img
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.5s" src="./img/brand-light-04.svg" alt=""></a>
+            <a href="#"><img
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.6s" src="./img/brand-light-05.svg" alt=""></a>
+            <a href="#"><img
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.7s" src="./img/brand-light-06.svg" alt=""></a>
+        </div>
+    </section>
 
     <!-- FEATURE -->
     <section class="feature"></section>
@@ -164,12 +216,215 @@
     <section class="message"></section>
 
     <!-- BLOGS -->
-    <section class="blogs"></section>
+    <section class="overflow-hidden">
+        <div class="mx-auto max-w-c-1390 sm:px-4 md:px-8 py-20 lg:py-25 xl:py-30 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 mb-10"
+            data-wow-duration="2s" data-wow-delay="0.2s">
+            <div class="title sm:w-full lg:w-[50%] mx-auto text-center animate__animated animate__fadeInDown wow">
+                <h2
+                    class="mb-4 inline-block mb-4 inline-block rounded-full bg-[#edf5ff] px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection text-[14px] font-medium text-black dark:text-white">
+                    NEWS & BLOGS
+                </h2>
+                <h1
+                    class="mb-4 sm:text-3xl xl:text-[44px] leading-[58px] font-bold text-[rgb(24,28,49)] dark:text-white xl:text-hero">
+                    Latest News & Blogs
+                </h1>
+                <p class="mx-auto md:w-4/5 w-full">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+                    Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+                </p>
+            </div>
+
+            <!-- BLOG MAIN -->
+            <div class="mx-auto mt-15 xl:mt-20 animate__animated animate__fadeInDown wow" data-wow-duration="2s"
+                data-wow-delay="0.2s">
+                <div class="lg:flex justify-between items-center md:grid md:grid-cols-2">
+
+                    <!-- BLOG ITEMS -->
+                    <div
+                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
+                        <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
+                            <img loading="lazy" decoding="async" data-nimg="fill"
+                                class="rounded-lg w-full h-full duration-300 group-hover:scale-110"
+                                src="./img/take-picture-1000x667.png" alt="">
+                        </a>
+                        <div class="px-4">
+                            <a href="#">
+                                <h5
+                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:text-white dark:hover:text-primary xl:text-itemtitle2">
+                                    Exploring
+                                    MERN Stack: Powering Modern We...</h5>
+                            </a>
+                            <p class="line-clamp-3">
+                                In the world of web
+                                development,
+                                staying ahead of the curve is crucial. One technology stack that ha</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
+                        <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
+                            <img loading="lazy" decoding="async" data-nimg="fill"
+                                class="rounded-lg w-full h-full duration-300 group-hover:scale-110"
+                                src="./img/UI&UX-970x440.png" alt="">
+                        </a>
+                        <div class="px-4">
+                            <a href="#">
+                                <h5
+                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:text-white dark:hover:text-primary xl:text-itemtitle2">
+                                    Best UI components for modern website...</h5>
+                            </a>
+                            <p class="line-clamp-3">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
+                        <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
+                            <img loading="lazy" decoding="async" data-nimg="fill"
+                                class="rounded-lg w-full h-full duration-300 group-hover:scale-110"
+                                src="./img/UI&UX-design-970x440.png" alt="">
+                        </a>
+                        <div class="px-4">
+                            <a href="#">
+                                <h5
+                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:text-white dark:hover:text-primary xl:text-itemtitle2">
+                                    The Power of UI/UX: Elevating Digital Ex...</h5>
+                            </a>
+                            <p class="line-clamp-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque,
+                                laoreet dolor.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer
+        class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection px-4 md:px-8 max-w-[1320px]">
+
+        <!-- FOOTER MAIN -->
+        <div class="lg:flex items-center justify-between mx-auto sm:py-25 md:py-20 lg:py-23">
+            <div class="w-[30%] lg:w-1/4 animate__animated animate__fadeInDown wow" data-wow-duration="2s"
+                data-wow-delay="0.7s">
+                <a href="#" class="relative">
+                    <img alt="Logo" loading="lazy" width="110" height="80" decoding="async" data-nimg="1"
+                        class="dark:hidden" style="color:transparent" src="./img/logo-light.svg">
+                    <img alt="Logo" loading="lazy" width="110" height="80" decoding="async" data-nimg="1"
+                        class="hidden dark:block" style="color:transparent" src="/img/logo-light.svg">
+                </a>
+
+                <p class="mb-10 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                <p class="mb-1.5 text-[14px] leading-[22px] uppercase tracking-[5px]">contact</p><a href="#"
+                    class="text-[26px] leading-[32px] font-medium text-black dark:text-white">hello@solid.com</a>
+            </div>
+
+            <div class="md:flex md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12 animate__animated animate__fadeInDown wow"
+                data-wow-duration="2s" data-wow-delay="0.2s">
+                <div class="">
+                    <h4
+                        class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black dark:text-white">
+                        Quick
+                        Links</h4>
+                    <ul>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Home</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Product</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Careers</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black dark:text-white">
+                        Support
+                    </h4>
+                    <ul>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Company</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Press media</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Our Blog</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black dark:text-white">
+                        Newsletter</h4>
+                    <p class="mb-4 w-[90%]">Subscribe to receive future updates</p>
+                    <form>
+                        <input type="email" placeholder="Email address"
+                            class="w-full rounded-full border border-gray-200 border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary relative">
+                        <button aria-label="signup to newsletter" class="absolute right-8 p-4">
+                            <i class="fi fi-ts-paper-plane-top font-[700]"></i>
+                        </button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="border border-gray-200 border-t border-stroke dark:border-strokedark animate__animated animate__fadeInDown wow"
+            data-wow-duration="2s" data-wow-delay="0.2s">
+            <div class=" flex sm:flex-col lg:flex-row items-center lg:justify-between py-7">
+                <div class="sm:mb-5 lg:mb-0">
+                    <ul class="flex items-center justify-center gap-x-9">
+                        <li><a href="#" class="hover:text-primary">English</a></li>
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary">Support</a></li>
+                    </ul>
+                </div>
+
+                <p class="xl:mr-5 sm:mb-5 lg:mb-0">© 2025 Solid. All rights reserved</p>
+
+                <div class="mb-0 lg:-mr-1 xl:mr-0">
+                    <ul class="flex items-center gap-5">
+                        <li><a href="#" aria-label="social-link">
+                                <i class="fa-brands fa-facebook-f text-[19px] text-gray-300"></i>
+                            </a></li>
+                        <li><a href="#" aria-label="social-link">
+                                <i class="fa-brands fa-twitter text-[19px] text-gray-300"></i>
+                            </a></li>
+                        <li><a href="#" aria-label="social-link">
+                                <i class="fa-brands fa-linkedin-in text-[22px] text-gray-300"></i>
+                            </a></li>
+                        <li><a href="#" aria-label="social-link">
+                                <i class="fa-brands fa-behance text-[19px] text-gray-300"></i>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <a href="#"
+        class="fixed bottom-8 right-8 z-[99] text-white bg-blue-500 w-10 h-10 text-center flex items-center cd-top text-replace js-cd-top opacity-0 hover:hover:bg-blue-400 duration-300">
+        <i class=" fa-solid fa-chevron-up mx-auto"></i>
+    </a>
 
     <!-- JAVASCRIPT -->
+    <!-- HEADER JS -->
+    <script>
+        const header = document.getElementById("main-header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) { // khi lăn xuống hơn 50px
+                header.classList.remove("xl:py-9");
+                header.classList.add("xl:py-6", "shadow-md", "border-b", "border-gray-200");
+            } else {
+                header.classList.add("xl:py-9");
+                header.classList.remove("xl:py-6", "shadow-md", "border-b", "border-gray-200");
+            }
+        });
+    </script>
+
     <!-- JQUERY JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -177,6 +432,10 @@
 
     <!-- FLOWBITE JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- BACK TO TOP JS -->
+    <script src="./libs/back-to-top-master/assets/js/main.js"></script>
+    <script src="./libs/back-to-top-master/assets/js/util.js"></script>
 
     <!-- WOW JS -->
     <script src="./libs/WOW-master/dist/wow.min.js"></script>
