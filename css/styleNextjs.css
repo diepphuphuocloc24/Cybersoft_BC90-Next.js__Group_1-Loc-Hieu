@@ -7,9 +7,24 @@ body {
   letter-spacing: 0.1px;
   line-height: 26px;
   font-weight: 400;
+  background-color: white;
 
   --tw-text-opacity: 1;
   color: rgb(117 118 147 / var(--tw-text-opacity));
+}
+
+@media (max-width: 767px) {
+  .padding-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .padding-custom {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
 }
 
 li {
@@ -51,6 +66,41 @@ a {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   --animate-duration: 2s;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 0.5s;
 }
 
 /* HEADER */
