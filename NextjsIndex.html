@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- FLOWBITE CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet">
 
 
     <!-- FONT AWESOME CDN -->
@@ -41,78 +41,90 @@
 
 <body>
     <!-- HEADER -->
-    <header id="main-header"
-        class="w-full left-0 top-0 z-10 fixed bg-white transition-all duration-200 xl:py-9 sm:py-6">
-        <div class="flex sm:flex-wrap xl:flex-nowrap items-center justify-between mx-auto px-4 md:px-8 2xl:px-0">
+    <header id="main-header" class="header w-full left-0 top-0 z-10 fixed bg-white xl:py-9 sm:py-6">
+        <div class="flex flex-wrap mx-auto max-w-c-1390 items-center justify-between padding-custom 2xl:px-0">
+
+            <!-- LOGO -->
             <a href="#">
                 <img src="./img/logo-light.svg" alt="Main Logo">
             </a>
 
             <!-- NAVBAR -->
-            <div class="lg:flex justify-between items-center hidden w-full lg:w-auto sm:order-2" id="navbar-cta">
-                <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mr-48">
-                    <li>
-                        <a href=" #"
-                            class="block py-2 px-3 ml-[8px] rounded-sm md:text-blue-500 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:text-blue-500 duration-[0.5s]"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Features</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Docs</a>
-                    </li>
-                    <li class="relative">
+            <div class="xl:flex-1 justify-between items-center hidden xl:block sm:w-full xl:inline-flex xl:items-center xl:w-auto sm:order-2 sm:shadow xl:shadow-none"
+                id="navbar-cta">
+                <nav>
+                    <ul
+                        class="flex sm:flex-col xl:flex-row font-medium px-4 sm:py-10 xl:py-0 border border-gray-50 rounded-lg bg-white xl:border-0 xl:ml-27">
+                        <li><a href="#"
+                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500 text-blue-500"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li><a href="#"
+                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Features</a>
+                        </li>
+                        <li><a href="#"
+                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Docs</a>
+                        </li>
+
                         <!-- DROPDOWN -->
-                        <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
-                            data-dropdown-trigger="hover"
-                            class="flex items-center justify-between w-full py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent duration-[0.5s]">
-                            Pages
-                            <i class="fa-solid fa-chevron-down text-[10px] ml-3"></i>
-                        </button>
+                        <li class="relative">
+                            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
+                                data-dropdown-trigger="hover"
+                                class="flex items-center justify-between block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">
+                                Pages
+                                <i class="fa-solid fa-chevron-down text-[10px] ml-3"></i>
+                            </button>
+                            <div id="dropdownHover"
+                                class="absolute top-[10rem] sm:mt-8 xl:!mt-12 hidden z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-62 dark:bg-gray-700 animate__animated animate__fadeInUp border">
+                                <ul class="sm:py-2 xl:py-4 xl:px-3 text-sm" aria-labelledby="dropdownHoverButton">
+                                    <li><a href="#"
+                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Blog
+                                            Grid</a></li>
+                                    <li><a href="#"
+                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
+                                            In</a></li>
+                                    <li><a href="#"
+                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
+                                            Up</a></li>
+                                    <li><a href="#"
+                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Docs</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Support</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">404</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
 
-                        <!-- Dropdown menu -->
-                        <div id="dropdownHover"
-                            class="absolute left-[2.5rem] top-[-0.375rem] mt-2 z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-62 dark:bg-gray-700 animate__animated animate__fadeInUp">
-                            <ul class="py-2 text-sm" aria-labelledby="dropdownHoverButton">
-                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Blog Grid</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Sign In</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Sign Up</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Docs</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">Support</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:text-blue-500">404</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 ml-[8px] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 duration-[0.5s]">Support</a>
-                    </li>
-                </ul>
+                        <li><a href="#"
+                                class="block sm:py-2 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Support</a>
+                        </li>
+                    </ul>
+                </nav>
 
-                <div class="flex md:order-2 space-x-3 md:space-x-0 md:flex rtl:space-x-reverse">
+                <!-- RIGHT MENU -->
+                <div class="flex space-x-3 xl:space-x-0 rtl:space-x-reverse sm:pb-10 xl:pb-0">
                     <ul class="flex items-center justify-between font-medium text-regular">
                         <li class="ml-7"><i class="fa-solid fa-magnifying-glass text-1xl"></i></li>
                         <li class="ml-7"><img src="./img/icon-moon.svg" alt=""></li>
-                        <li class="ml-7 hover:text-blue-500 duration-[0.5s] text-1xl"><a
-                                href="https://solid.nextjstemplates.com/auth/signin">Sign
-                                In</a>
+                        <li class="ml-7 hover:text-blue-500 transition-all duration-500"><a href="#">Sign In</a></li>
+                        <li class="ml-7">
+                            <a href="#"
+                                class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-full px-7.5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 transition-all duration-500">Sign
+                                Up</a>
                         </li>
-                        <li class="ml-7"><a href="./https://solid.nextjstemplates.com/auth/signup"
-                                class="text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full px-7.5 py-3 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 duration-[0.5s]">Sign
-                                Up</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="flex xl:hidden sm:order-1 space-x-3 sm:space-x-0 rtl:space-x-reverse ">
+            <!-- SIDEBAR -->
+            <div class="flex xl:hidden sm:order-1">
                 <button data-collapse-toggle="navbar-cta" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-cta" aria-expanded="false">
@@ -126,7 +138,7 @@
     <!-- BANNER -->
     <section class="banner overflow-hidden">
         <div
-            class="lg:flex items-center justify-between mx-auto sm:px-4 md:px-8 xl:px-4 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 max-w-[1320px]">
+            class="lg:flex items-center justify-between mx-auto padding-custom pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 max-w-c-1390">
             <div class="banner_left xl:w-[51%]">
                 <div class="title">
                     <h2 class="mb-4.5 text-lg font-medium text-black md:w-[50%] lg:w-full">
@@ -151,7 +163,7 @@
                         Built-winth - Next.js, React 18 and TypeScript.</p>
                 </div>
                 <a href="https://solid.nextjstemplates.com/auth/signup"
-                    class="inline-block rounded-full bg-gray-800 px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-gray-700 dark:bg-btndark dark:hover:bg-blackho mt-10">
+                    class="inline-block rounded-full bg-gray-800 px-7.5 py-2.5 text-white duration-500 ease-in-out hover:bg-gray-700 dark:bg-btndark dark:hover:bg-blackho mt-10">
                     Get Started
                 </a>
             </div>
@@ -166,9 +178,8 @@
     </section>
 
     <!-- BRAND -->
-    <section
-        class="brand border border-gray-100 border-y-stroke bg-alabaster py-8 dark:border-y-strokedark dark:bg-black">
-        <div class="md:flex items-center justify-between mx-auto px-4 md:px-8 xl:px-4 max-w-[1320px]
+    <section class="brand border border-gray-100 border-y-stroke bg-alabaster py-8">
+        <div class="md:flex items-center justify-between mx-auto padding-custom max-w-c-1390
             sm:grid sm:grid-cols-3 sm:gap-4 sm:text-center">
             <a href="#"><img
                     class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
@@ -192,7 +203,81 @@
     </section>
 
     <!-- FEATURE -->
-    <section class="feature"></section>
+    <section id="features" class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+            <div class="animate_top mx-auto text-center" style="opacity:0;transform:translateY(-20px) translateZ(0)">
+                <div
+                    class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <span class="text-sectiontitle font-medium text-black dark:text-white">SOLID FEATURES</span>
+                </div>
+                <h2
+                    class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
+                    Core Features of Solid</h2>
+                <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. In
+                    convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+                    ante in maximus.</p>
+            </div>
+            <div class="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
+                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            style="color:transparent" src="/images/icon/icon-01.svg" />
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                        Crafted for SaaS
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
+                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            style="color:transparent" src="/images/icon/icon-02.svg" /></div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                        High-quality Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
+                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            style="color:transparent" src="/images/icon/icon-03.svg" /></div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                        Next.js + TypeScript</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
+                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            style="color:transparent" src="/images/icon/icon-04.svg" /></div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                        Sanity Blog and Docs</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
+                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            style="color:transparent" src="/images/icon/icon-05.svg" /></div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">DB,
+                        Auth and Stripe</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
+                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            style="color:transparent" src="/images/icon/icon-06.svg" /></div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                        Regular Free Updates</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- SOLUTION -->
     <section class="solution"></section>
@@ -213,19 +298,106 @@
     <section class="pricing"></section>
 
     <!-- MESSAGE -->
-    <section class="message"></section>
+    <section id="Message" class="overflow-hidden">
+        <div class="mx-auto padding-custom max-w-c-1390">
+            <div class="relative px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20 rounded-lg" bis_skin_checked="1">
+
+                <!-- BACKGROUND -->
+                <div>
+                    <div class="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-white to-[#dee7ff]/30"
+                        bis_skin_checked="1">
+                    </div>
+                    <div class="absolute bottom-[-255px] left-0 -z-1 h-full w-full" bis_skin_checked="1">
+                        <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill"
+                            class="absolute h-full w-full" src="./img/shapes/shape-dotted-light.svg">
+                    </div>
+                </div>
+
+                <!-- MESSAGE MAIN -->
+                <div class="flex flex-col gap-8 md:flex-row md:justify-between xl:gap-20">
+
+                    <!-- FORM -->
+                    <div class="order-2 xl:w-full rounded-lg bg-white p-7.5 shadow-solid-8 !md:w-3/5 !lg:w-3/4 xl:p-15 animate__animated animate__fadeInDown wow"
+                        data-wow-duration="2s" data-wow-delay="0.2s">
+                        <h2 class="mb-15 sm:text-3xl xl:text-[40px] xl:leading-[52px] font-semibold text-black">
+                            Send a message</h2>
+                        <form>
+                            <div class="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                                <input type="text" placeholder="Full name"
+                                    class="w-full border-0 border-b border-gray-300 bg-transparent pb-3.5 placeholder:text-gray-400 focus:border-black focus:placeholder:text-black !outline-none !focus:outline-none lg:w-1/2">
+
+                                <input type="email" placeholder="Email address"
+                                    class="w-full border-0 border-b border-gray-300 bg-transparent pb-3.5 placeholder:text-gray-400 focus:border-black focus:placeholder:text-black !outline-none !focus:outline-none lg:w-1/2">
+                            </div>
+
+                            <div class="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                                <input placeholder="Subject" type="text"
+                                    class="w-full border-0 border-b border-gray-300 bg-transparent pb-3.5 placeholder:text-gray-400 focus:border-black focus:placeholder:text-black !outline-none !focus:outline-none lg:w-1/2">
+
+                                <input placeholder="Phone number" type="text"
+                                    class="w-full border-0 border-b border-gray-300 bg-transparent pb-3.5 placeholder:text-gray-400 focus:border-black focus:placeholder:text-black !outline-none !focus:outline-none lg:w-1/2">
+                            </div>
+
+                            <div class="mb-11.5 flex">
+                                <textarea rows="4" placeholder="Message"
+                                    class="w-full border-0 border-b border-gray-300 bg-transparent placeholder:text-gray-400 focus:border-black focus:placeholder:text-black !outline-none !focus:outline-none">
+                                </textarea>
+                            </div>
+
+                            <!-- CHECK BOX -->
+                            <div class="flex flex-wrap gap-4 xl:justify-between ">
+                                <div class="mb-4 flex md:mb-0">
+                                    <input id="default-checkbox" class="peer sr-only" type="checkbox">
+                                    <span
+                                        class="group mt-2 mr-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
+                                    </span>By clicking Checkbox, you agree to use our “Form” terms And
+                                    consent
+                                    cookie usage in browser
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-6 py-3 font-medium text-white duration-500 ease-in-out hover:bg-gray-700">
+                                    Send Message
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="order-1 !w-full md:order-2 !md:w-2/5 md:p-7.5 !lg:w-[26%] xl:pt-15 animate__animated animate__fadeInDown wow"
+                        data-wow-duration="2s" data-wow-delay="0.5s">
+                        <h3 class="mb-12.5 sm:text-3xl xl:text-[40px] xl:leading-[52px] font-semibold text-black">
+                            Find
+                            us
+                        </h3>
+                        <div class="mb-7">
+                            <h4 class="mb-4 text-[18px] leading-[26px] font-medium text-black">Our Loaction</h4>
+                            <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+                        </div>
+                        <div class="mb-7">
+                            <h4 class="mb-4 text-[18px] leading-[26px] font-medium text-black">Email Address</h4>
+                            <p><a href="#">yourmail@domainname.com</a></p>
+                        </div>
+                        <div>
+                            <h4 class="mb-4 text-[18px] leading-[26px] font-medium text-black">Phone Number</h4>
+                            <p><a href="#">+009 42334 6343 843</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- BLOGS -->
-    <section class="overflow-hidden">
-        <div class="mx-auto max-w-c-1390 sm:px-4 md:px-8 py-20 lg:py-25 xl:py-30 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 mb-10"
+    <section class="overflow-hidden bg-white">
+        <div class="mx-auto max-w-c-1390 padding-custom py-20 lg:py-25 xl:py-30 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 mb-10"
             data-wow-duration="2s" data-wow-delay="0.2s">
             <div class="title sm:w-full lg:w-[50%] mx-auto text-center animate__animated animate__fadeInDown wow">
                 <h2
-                    class="mb-4 inline-block mb-4 inline-block rounded-full bg-[#edf5ff] px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection text-[14px] font-medium text-black dark:text-white">
+                    class="mb-4 inline-block mb-4 inline-block rounded-full bg-[#edf5ff] px-4.5 py-1.5 text-[14px] font-medium text-black">
                     NEWS & BLOGS
                 </h2>
-                <h1
-                    class="mb-4 sm:text-3xl xl:text-[44px] leading-[58px] font-bold text-[rgb(24,28,49)] dark:text-white xl:text-hero">
+                <h1 class="mb-4 sm:text-3xl xl:text-[44px] leading-[58px] font-bold text-[rgb(24,28,49)] xl:text-hero">
                     Latest News & Blogs
                 </h1>
                 <p class="mx-auto md:w-4/5 w-full">
@@ -244,13 +416,13 @@
                         class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
                         <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
-                                class="rounded-lg w-full h-full duration-300 group-hover:scale-110"
+                                class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
                                 src="./img/take-picture-1000x667.png" alt="">
                         </a>
                         <div class="px-4">
                             <a href="#">
                                 <h5
-                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:text-white dark:hover:text-primary xl:text-itemtitle2">
+                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:hover:text-primary xl:text-itemtitle2">
                                     Exploring
                                     MERN Stack: Powering Modern We...</h5>
                             </a>
@@ -265,13 +437,13 @@
                         class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
                         <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
-                                class="rounded-lg w-full h-full duration-300 group-hover:scale-110"
+                                class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
                                 src="./img/UI&UX-970x440.png" alt="">
                         </a>
                         <div class="px-4">
                             <a href="#">
                                 <h5
-                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:text-white dark:hover:text-primary xl:text-itemtitle2">
+                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:hover:text-primary xl:text-itemtitle2">
                                     Best UI components for modern website...</h5>
                             </a>
                             <p class="line-clamp-3">
@@ -284,13 +456,13 @@
                         class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
                         <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
-                                class="rounded-lg w-full h-full duration-300 group-hover:scale-110"
+                                class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
                                 src="./img/UI&UX-design-970x440.png" alt="">
                         </a>
                         <div class="px-4">
                             <a href="#">
                                 <h5
-                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:text-white dark:hover:text-primary xl:text-itemtitle2">
+                                    class="mb-3.5 mt-7.5 line-clamp-2 text-[24px] leading-[32px] font-medium text-black hover:text-blue-500 dark:hover:text-primary xl:text-itemtitle2">
                                     The Power of UI/UX: Elevating Digital Ex...</h5>
                             </a>
                             <p class="line-clamp-3">
@@ -306,7 +478,7 @@
 
     <!-- FOOTER -->
     <footer
-        class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection px-4 md:px-8 max-w-[1320px]">
+        class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection padding-custom max-w-c-1390">
 
         <!-- FOOTER MAIN -->
         <div class="lg:flex items-center justify-between mx-auto sm:py-25 md:py-20 lg:py-23">
@@ -322,7 +494,7 @@
                 <p class="mb-10 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                 <p class="mb-1.5 text-[14px] leading-[22px] uppercase tracking-[5px]">contact</p><a href="#"
-                    class="text-[26px] leading-[32px] font-medium text-black dark:text-white">hello@solid.com</a>
+                    class="text-[26px] leading-[32px] font-medium text-black">hello@solid.com</a>
             </div>
 
             <div class="md:flex md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12 animate__animated animate__fadeInDown wow"
@@ -405,7 +577,7 @@
 
     <!-- BACK TO TOP -->
     <a href="#"
-        class="fixed bottom-8 right-8 z-[99] text-white bg-blue-500 w-10 h-10 text-center flex items-center cd-top text-replace js-cd-top opacity-0 hover:hover:bg-blue-400 duration-300">
+        class="fixed bottom-8 right-8 z-[99] text-white bg-blue-500 w-10 h-10 text-center flex items-center cd-top text-replace js-cd-top opacity-0 hover:hover:bg-blue-400 duration-500">
         <i class=" fa-solid fa-chevron-up mx-auto"></i>
     </a>
 
@@ -421,6 +593,20 @@
             } else {
                 header.classList.add("xl:py-9");
                 header.classList.remove("xl:py-6", "shadow-md", "border-b", "border-gray-200");
+            }
+        });
+    </script>
+
+    <script>
+        const headerTablet = document.getElementById("main-header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) { // khi lăn xuống hơn 50px
+                headerTablet.classList.remove("sm:py-6");
+                headerTablet.classList.add("sm:py-4", "shadow-md", "border-b", "border-gray-200");
+            } else {
+                headerTablet.classList.add("sm:py-6");
+                headerTablet.classList.remove("sm:py-4", "shadow-md", "border-b", "border-gray-200");
             }
         });
     </script>
