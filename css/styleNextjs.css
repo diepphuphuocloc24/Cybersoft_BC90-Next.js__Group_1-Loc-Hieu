@@ -9,8 +9,7 @@ body {
   font-weight: 400;
   background-color: white;
 
-  --tw-text-opacity: 1;
-  color: rgb(117 118 147 / var(--tw-text-opacity));
+  color: rgb(117 118 147);
 }
 
 @media (max-width: 767px) {
@@ -68,11 +67,11 @@ a {
   --animate-duration: 2s;
 }
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeInDownCustom {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 20%, 0);
-    transform: translate3d(0, 20%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {
@@ -81,43 +80,53 @@ a {
     transform: translate3d(0, 0, 0);
   }
 }
-@keyframes fadeInUp {
-  0% {
+@keyframes fadeInDownCustom {
+  from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 20%, 0);
-    transform: translate3d(0, 20%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
-  100% {
+  to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
-.animate__fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-.animate__animated.animate__fadeInUp {
-  --animate-duration: 0.5s;
+.animate__fadeInDownCustom {
+  -webkit-animation-name: fadeInDownCustom;
+  animation-name: fadeInDownCustom;
+  --animate-duration: 2s;
 }
 
 /* HEADER */
 .dropdown::before {
   position: absolute;
-  top: -0.375rem;
-  left: 2.5rem;
+  top: -0.375rem; /* dịch lên trên */
+  left: 2.5rem; /* canh ngang */
   height: 0.75rem;
   width: 0.75rem;
-  --tw-rotate: 45deg;
-  border-left-width: 1px;
-  border-top-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(238 238 238 / var(--tw-border-opacity));
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  transform: rotate(45deg); /* xoay thành hình mũi tên */
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
+  content: "";
+  background-color: white;
+}
+
+@media (min-width: 640px) {
+  header .header__dropdown .header__dropdown__item {
+    transform: translateY(10%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    padding-top: 10px;
+  }
+
+  header .header__dropdown:hover .header__dropdown__item {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 /* BANNER */

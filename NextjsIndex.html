@@ -31,9 +31,15 @@
     <!-- FLATICON ICON CSS -->
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
-
-    <!-- ANIMATE CSS -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/styleNextjs.css">
@@ -42,7 +48,7 @@
 <body>
     <!-- HEADER -->
     <header id="main-header" class="header w-full left-0 top-0 z-10 fixed bg-white xl:py-9 sm:py-6">
-        <div class="flex flex-wrap mx-auto max-w-c-1390 items-center justify-between padding-custom 2xl:px-0">
+        <div class="flex flex-wrap mx-auto max-w-[1390px] items-center justify-between padding-custom 2xl:px-0">
 
             <!-- LOGO -->
             <a href="#">
@@ -50,11 +56,11 @@
             </a>
 
             <!-- NAVBAR -->
-            <div class="xl:flex-1 justify-between items-center hidden xl:block sm:w-full xl:inline-flex xl:items-center xl:w-auto sm:order-2 sm:shadow xl:shadow-none"
+            <div class="xl:flex-1 justify-between items-center hidden xl:block sm:w-full xl:inline-flex xl:items-center xl:w-auto sm:order-2 !sm:shadow xl:shadow-none"
                 id="navbar-cta">
                 <nav>
                     <ul
-                        class="flex sm:flex-col xl:flex-row font-medium px-4 sm:py-10 xl:py-0 border border-gray-50 rounded-lg bg-white xl:border-0 xl:ml-27">
+                        class="flex sm:flex-col xl:flex-row font-medium px-4 sm:py-10 xl:py-0 sm:border-gray-50 xl:border-0 rounded-lg bg-white xl:ml-27">
                         <li><a href="#"
                                 class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500 text-blue-500"
                                 aria-current="page">Home</a>
@@ -70,33 +76,32 @@
                         </li>
 
                         <!-- DROPDOWN -->
-                        <li class="relative">
-                            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
-                                data-dropdown-trigger="hover"
-                                class="flex items-center justify-between block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">
+                        <li class="relative header__dropdown">
+                            <button
+                                class="flex cursor-pointer items-center justify-between block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">
                                 Pages
                                 <i class="fa-solid fa-chevron-down text-[10px] ml-3"></i>
                             </button>
-                            <div id="dropdownHover"
-                                class="absolute top-[10rem] sm:mt-8 xl:!mt-12 hidden z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-62 dark:bg-gray-700 animate__animated animate__fadeInUp border">
-                                <ul class="sm:py-2 xl:py-4 xl:px-3 text-sm" aria-labelledby="dropdownHoverButton">
+                            <div
+                                class="header__dropdown__item absolute top-0 -left-3 sm:!mt-8 xl:!mt-12 z-10 bg-white rounded-lg shadow-lg w-62">
+                                <ul class="sm:py-2 xl:py-4 xl:px-3 text-sm dropdown">
                                     <li><a href="#"
-                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Blog
+                                            class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Blog
                                             Grid</a></li>
                                     <li><a href="#"
-                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
+                                            class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
                                             In</a></li>
                                     <li><a href="#"
-                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
+                                            class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
                                             Up</a></li>
                                     <li><a href="#"
-                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Docs</a>
+                                            class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Docs</a>
                                     </li>
                                     <li><a href="#"
-                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">Support</a>
+                                            class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Support</a>
                                     </li>
                                     <li><a href="#"
-                                            class="block px-4 py-2 !hover:text-blue-500 transition-all duration-500 text-[16px]">404</a>
+                                            class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">404</a>
                                     </li>
                                 </ul>
                             </div>
@@ -138,7 +143,7 @@
     <!-- BANNER -->
     <section class="banner overflow-hidden">
         <div
-            class="lg:flex items-center justify-between mx-auto padding-custom pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 max-w-c-1390">
+            class="lg:flex items-center justify-between mx-auto padding-custom pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 max-w-[1390px]">
             <div class="banner_left xl:w-[51%]">
                 <div class="title">
                     <h2 class="mb-4.5 text-lg font-medium text-black md:w-[50%] lg:w-full">
@@ -169,7 +174,7 @@
             </div>
             <div class="banner__right flex relative lg:w-[150%] xl:w-[45%] sm:hidden lg:block">
                 <img src=" ./img/shape-01.png" class="w-[46px] h-auto object-contain absolute top-0 -left-12" alt="">
-                <img src="./img/hero-light.svg" class="shadow-[0_0_200px_0.1px_rgba(0,0,0,0.1)]" width="100%"
+                <img src="./img/hero-light.svg" class="shadow-[0px_10px_120px_rgba(45,74,170,0.1)]" width="100%"
                     height="100%" alt="">
                 <img src="./img/shape-02.svg" class="absolute bottom-0 right-0" alt="">
                 <img src="./img/shape-03.svg" class="absolute bottom-0 -right-6" alt="">
@@ -179,99 +184,112 @@
 
     <!-- BRAND -->
     <section class="brand border border-gray-100 border-y-stroke bg-alabaster py-8">
-        <div class="md:flex items-center justify-between mx-auto padding-custom max-w-c-1390
+        <div class="md:flex items-center justify-between mx-auto padding-custom max-w-[1390px]
             sm:grid sm:grid-cols-3 sm:gap-4 sm:text-center">
             <a href="#"><img
-                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] hover:opacity-[100%] animate__animated animate__fadeInDownCustom wow"
                     data-wow-duration="2s" data-wow-delay="0.2s" src="./img/brand-light-01.svg" alt=""></a>
             <a href="#"><img
-                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] hover:opacity-[100%] animate__animated animate__fadeInDownCustom wow"
                     data-wow-duration="2s" data-wow-delay="0.3s" src="./img/brand-light-02.svg" alt=""></a>
             <a href="#"><img
-                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] hover:opacity-[100%] animate__animated animate__fadeInDownCustom wow"
                     data-wow-duration="2s" data-wow-delay="0.4s" src="./img/brand-light-03.svg" alt=""></a>
             <a href="#"><img
-                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] hover:opacity-[100%] animate__animated animate__fadeInDownCustom wow"
                     data-wow-duration="2s" data-wow-delay="0.5s" src="./img/brand-light-04.svg" alt=""></a>
             <a href="#"><img
-                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] hover:opacity-[100%] animate__animated animate__fadeInDownCustom wow"
                     data-wow-duration="2s" data-wow-delay="0.6s" src="./img/brand-light-05.svg" alt=""></a>
             <a href="#"><img
-                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] animate__animated animate__fadeInDown wow"
+                    class="m-3.5 opacity-70 mx-w-full block h-10 w-[98px] hover:opacity-[100%] animate__animated animate__fadeInDownCustom wow"
                     data-wow-duration="2s" data-wow-delay="0.7s" src="./img/brand-light-06.svg" alt=""></a>
         </div>
     </section>
 
     <!-- FEATURE -->
     <section id="features" class="py-20 lg:py-25 xl:py-30">
-        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-            <div class="animate_top mx-auto text-center" style="opacity:0;transform:translateY(-20px) translateZ(0)">
-                <div
-                    class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
-                    <span class="text-sectiontitle font-medium text-black dark:text-white">SOLID FEATURES</span>
-                </div>
+        <div class="mx-auto max-w-[1390px] padding-custom xl:px-0">
+            <div class="title sm:w-full lg:w-[50%] mx-auto text-center animate__animated animate__fadeInDown wow"
+                data-wow-duration="2s" data-wow-delay="0.2s">
                 <h2
-                    class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
-                    Core Features of Solid</h2>
-                <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. In
-                    convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-                    ante in maximus.</p>
+                    class="mb-4 inline-block mb-4 inline-block rounded-full bg-[#edf5ff] px-4.5 py-1.5 text-[14px] font-medium text-black">
+                    SOLID FEATURES
+                </h2>
+                <h1 class="mb-4 sm:text-3xl xl:text-[44px] leading-[58px] font-bold text-[rgb(24,28,49)] xl:text-hero">
+                    Core Features of Solid
+                </h1>
+                <p class="mx-auto md:w-4/5 w-full">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+                    Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+                </p>
             </div>
+
+            <!-- FEATURE MAIN -->
             <div class="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
-                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
-                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/images/icon/icon-01.svg" />
+
+                <!-- FEATURE ITEM -->
+                <div class="rounded-lg border border-white bg-white p-7.5 shadow-[0px_6px_90px_rgba(8,14,40,0.04)] hover:shadow-[0px_6px_90px_rgba(8,14,40,0.1)] transition-shadow duration-300 xl:p-12.5 animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-[4px] bg-blue-500 text-white">
+                        <i class="fi fi-ss-chart-simple text-3xl leading-none"></i>
                     </div>
-                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                    <h3 class="mb-5 mt-7.5 text-3xl font-semibold text-black">
                         Crafted for SaaS
                     </h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                 </div>
-                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
-                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/images/icon/icon-02.svg" /></div>
-                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+
+                <div class="rounded-lg border border-white bg-white p-7.5 shadow-[0px_6px_90px_rgba(8,14,40,0.04)] hover:shadow-[0px_6px_90px_rgba(8,14,40,0.1)] transition-shadow duration-300 xl:p-12.5 animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-[4px] bg-blue-500 text-white">
+                        <i class="fi fi-sr-layers rounded-[4px] bg-blue-500 text-white text-3xl p-5 leading-none"></i>
+                    </div>
+
+                    <h3 class="mb-5 mt-7.5 text-3xl font-semibold text-black">
                         High-quality Design</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                 </div>
-                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
-                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/images/icon/icon-03.svg" /></div>
-                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+
+                <div class="rounded-lg border border-white bg-white p-7.5 shadow-[0px_6px_90px_rgba(8,14,40,0.04)] hover:shadow-[0px_6px_90px_rgba(8,14,40,0.1)] transition-shadow duration-300 xl:p-12.5 animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-[4px] bg-blue-500 text-white">
+                        <i
+                            class="fi fi-ss-blog-text rounded-[4px] bg-blue-500 text-white text-3xl p-5 leading-none"></i>
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-3xl font-semibold text-black">
                         Next.js + TypeScript</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                 </div>
-                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
-                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/images/icon/icon-04.svg" /></div>
-                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+
+                <div class="rounded-lg border border-white bg-white p-7.5 shadow-[0px_6px_90px_rgba(8,14,40,0.04)] hover:shadow-[0px_6px_90px_rgba(8,14,40,0.1)] transition-shadow duration-300 xl:p-12.5 animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-[4px] bg-blue-500 text-white">
+                        <i
+                            class="fi fi-rr-tachometer-alt-fastest rounded-[4px] bg-blue-500 text-white text-3xl p-5 leading-none"></i>
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-3xl font-semibold text-black">
                         Sanity Blog and Docs</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                 </div>
-                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
-                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/images/icon/icon-05.svg" /></div>
-                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">DB,
+
+                <div class="rounded-lg border border-white bg-white p-7.5 shadow-[0px_6px_90px_rgba(8,14,40,0.04)] hover:shadow-[0px_6px_90px_rgba(8,14,40,0.1)] transition-shadow duration-300 xl:p-12.5 animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-[4px] bg-blue-500 text-white">
+                        <i
+                            class="fi fi-ss-table-layout rounded-[4px] bg-blue-500 text-white text-3xl p-5 leading-none"></i>
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-3xl font-semibold text-black">DB,
                         Auth and Stripe</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                 </div>
-                <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-                    style="opacity:0;transform:translateY(-10px) translateZ(0)">
-                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary"><img
-                            alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/images/icon/icon-06.svg" /></div>
-                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+
+                <div class="rounded-lg border border-white bg-white p-7.5 shadow-[0px_6px_90px_rgba(8,14,40,0.04)] hover:shadow-[0px_6px_90px_rgba(8,14,40,0.1)] transition-shadow duration-300 xl:p-12.5 animate__animated animate__fadeInDown wow"
+                    data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-[4px] bg-blue-500 text-white">
+                        <i class="fi fi-br-refresh rounded-[4px] bg-blue-500 text-white text-3xl p-5 leading-none"></i>
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-3xl font-semibold text-black">
                         Regular Free Updates</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                 </div>
@@ -299,7 +317,7 @@
 
     <!-- MESSAGE -->
     <section id="Message" class="overflow-hidden">
-        <div class="mx-auto padding-custom max-w-c-1390">
+        <div class="mx-auto padding-custom max-w-[1390px]">
             <div class="relative px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20 rounded-lg" bis_skin_checked="1">
 
                 <!-- BACKGROUND -->
@@ -309,7 +327,7 @@
                     </div>
                     <div class="absolute bottom-[-255px] left-0 -z-1 h-full w-full" bis_skin_checked="1">
                         <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill"
-                            class="absolute h-full w-full" src="./img/shapes/shape-dotted-light.svg">
+                            class="!absolute h-full w-full" src="./img/shapes/shape-dotted-light.svg">
                     </div>
                 </div>
 
@@ -317,7 +335,7 @@
                 <div class="flex flex-col gap-8 md:flex-row md:justify-between xl:gap-20">
 
                     <!-- FORM -->
-                    <div class="order-2 xl:w-full rounded-lg bg-white p-7.5 shadow-solid-8 !md:w-3/5 !lg:w-3/4 xl:p-15 animate__animated animate__fadeInDown wow"
+                    <div class="order-2 xl:w-full rounded-lg bg-white p-7.5 shadow-solid-8 md:!w-3/5 lg:!w-3/4 xl:p-15 animate__animated animate__fadeInDown wow"
                         data-wow-duration="2s" data-wow-delay="0.2s">
                         <h2 class="mb-15 sm:text-3xl xl:text-[40px] xl:leading-[52px] font-semibold text-black">
                             Send a message</h2>
@@ -364,7 +382,7 @@
                     </div>
 
                     <!-- CONTACT -->
-                    <div class="order-1 !w-full md:order-2 !md:w-2/5 md:p-7.5 !lg:w-[26%] xl:pt-15 animate__animated animate__fadeInDown wow"
+                    <div class="order-1 !w-full md:order-2 md:!w-2/5 md:p-7.5 lg:!w-[26%] xl:pt-15 animate__animated animate__fadeInDown wow"
                         data-wow-duration="2s" data-wow-delay="0.5s">
                         <h3 class="mb-12.5 sm:text-3xl xl:text-[40px] xl:leading-[52px] font-semibold text-black">
                             Find
@@ -390,7 +408,7 @@
 
     <!-- BLOGS -->
     <section class="overflow-hidden bg-white">
-        <div class="mx-auto max-w-c-1390 padding-custom py-20 lg:py-25 xl:py-30 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 mb-10"
+        <div class="mx-auto max-w-[1390px] padding-custom py-20 lg:py-25 xl:py-30 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 mb-10"
             data-wow-duration="2s" data-wow-delay="0.2s">
             <div class="title sm:w-full lg:w-[50%] mx-auto text-center animate__animated animate__fadeInDown wow">
                 <h2
@@ -413,7 +431,7 @@
 
                     <!-- BLOG ITEMS -->
                     <div
-                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
+                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0px_12px_120px_rgba(45,74,170,0.06)] dark:bg-blacksection">
                         <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
                                 class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
@@ -434,7 +452,7 @@
                     </div>
 
                     <div
-                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
+                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0px_12px_120px_rgba(45,74,170,0.06)] dark:bg-blacksection">
                         <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
                                 class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
@@ -453,7 +471,7 @@
                     </div>
 
                     <div
-                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0_0_500px_0.5px_rgba(0,0,0,0.1)] dark:bg-blacksection">
+                        class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0px_12px_120px_rgba(45,74,170,0.06)] dark:bg-blacksection">
                         <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
                                 class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
@@ -478,10 +496,10 @@
 
     <!-- FOOTER -->
     <footer
-        class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection padding-custom max-w-c-1390">
+        class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection max-w-[1390px]">
 
         <!-- FOOTER MAIN -->
-        <div class="lg:flex items-center justify-between mx-auto sm:py-25 md:py-20 lg:py-23">
+        <div class="lg:flex items-center justify-between mx-auto sm:py-25 md:py-20 lg:py-23 padding-custom">
             <div class="w-[30%] lg:w-1/4 animate__animated animate__fadeInDown wow" data-wow-duration="2s"
                 data-wow-delay="0.7s">
                 <a href="#" class="relative">
@@ -505,10 +523,17 @@
                         Quick
                         Links</h4>
                     <ul>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Home</a></li>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Product</a></li>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Careers</a></li>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Pricing</a></li>
+                        <li><a href="#"
+                                class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Home</a></li>
+                        <li><a href="#"
+                                class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Product</a>
+                        </li>
+                        <li><a href="#"
+                                class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Careers</a>
+                        </li>
+                        <li><a href="#"
+                                class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Pricing</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -518,10 +543,16 @@
                         Support
                     </h4>
                     <ul>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Company</a></li>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Press media</a></li>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Our Blog</a></li>
-                        <li><a href="#" class="mb-3 inline-block hover:text-primary">Contact Us</a></li>
+                        <li><a href="#"
+                                class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Company</a>
+                        </li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Press
+                                media</a></li>
+                        <li><a href="#" class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Our
+                                Blog</a></li>
+                        <li><a href="#"
+                                class="mb-3 inline-block hover:text-blue-500 transition-all duration-300">Contact Us</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -542,14 +573,14 @@
         </div>
 
         <!-- COPYRIGHT -->
-        <div class="border border-gray-200 border-t border-stroke dark:border-strokedark animate__animated animate__fadeInDown wow"
+        <div class="border border-gray-200 border-t border-stroke dark:border-strokedark animate__animated animate__fadeInDown wow padding-custom"
             data-wow-duration="2s" data-wow-delay="0.2s">
             <div class=" flex sm:flex-col lg:flex-row items-center lg:justify-between py-7">
                 <div class="sm:mb-5 lg:mb-0">
                     <ul class="flex items-center justify-center gap-x-9">
-                        <li><a href="#" class="hover:text-primary">English</a></li>
-                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-primary">Support</a></li>
+                        <li><a href="#" class="hover:text-blue-500 transition-all duration-300">English</a></li>
+                        <li><a href="#" class="hover:text-blue-500 transition-all duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-500 transition-all duration-300">Support</a></li>
                     </ul>
                 </div>
 
@@ -558,16 +589,20 @@
                 <div class="mb-0 lg:-mr-1 xl:mr-0">
                     <ul class="flex items-center gap-5">
                         <li><a href="#" aria-label="social-link">
-                                <i class="fa-brands fa-facebook-f text-[19px] text-gray-300"></i>
+                                <i
+                                    class="fa-brands fa-facebook-f text-[19px] text-gray-300 hover:text-blue-500 transition-all duration-300"></i>
                             </a></li>
                         <li><a href="#" aria-label="social-link">
-                                <i class="fa-brands fa-twitter text-[19px] text-gray-300"></i>
+                                <i
+                                    class="fa-brands fa-twitter text-[19px] text-gray-300 hover:text-blue-500 transition-all duration-300"></i>
                             </a></li>
                         <li><a href="#" aria-label="social-link">
-                                <i class="fa-brands fa-linkedin-in text-[22px] text-gray-300"></i>
+                                <i
+                                    class="fa-brands fa-linkedin-in text-[22px] text-gray-300 hover:text-blue-500 transition-all duration-300"></i>
                             </a></li>
                         <li><a href="#" aria-label="social-link">
-                                <i class="fa-brands fa-behance text-[19px] text-gray-300"></i>
+                                <i
+                                    class="fa-brands fa-behance text-[19px] text-gray-300 hover:text-blue-500 transition-all duration-300"></i>
                             </a></li>
                     </ul>
                 </div>
@@ -576,10 +611,12 @@
     </footer>
 
     <!-- BACK TO TOP -->
-    <a href="#"
-        class="fixed bottom-8 right-8 z-[99] text-white bg-blue-500 w-10 h-10 text-center flex items-center cd-top text-replace js-cd-top opacity-0 hover:hover:bg-blue-400 duration-500">
-        <i class=" fa-solid fa-chevron-up mx-auto"></i>
-    </a>
+    <div class="BackToTop">
+        <a href="#"
+            class="fixed bottom-8 right-8 z-10 text-white bg-blue-500 w-10 h-10 text-center flex items-center cd-top text-replace js-cd-top hover:hover:bg-blue-400 duration-500 cd-top text-replace js-cd-top opacity-0">
+            <i class=" fa-solid fa-chevron-up mx-auto"></i>
+        </a>
+    </div>
 
     <!-- JAVASCRIPT -->
     <!-- HEADER JS -->
