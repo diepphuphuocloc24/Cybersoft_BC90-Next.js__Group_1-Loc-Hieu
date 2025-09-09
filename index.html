@@ -42,6 +42,13 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
+    <!-- SLICK SLIDER-->
+        <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick.css" />
+        <link
+            rel="stylesheet"
+            href="./libs/slick-1.8.1/slick/slick-theme.css"
+        />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/styleSolid.css">
 </head>
@@ -322,22 +329,520 @@
     </section>
 
     <!-- SOLUTION -->
-    <section class="solution"></section>
+    <section id="solution" class="flex overflow-hidden py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-[1390px] padding-custom xl:px-0">
+            <div class="flex items-center gap-8rem lg:gap-32.5">
+                <div class="wow animate__animated animate__fadeInLeft relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2">
+                    <img src="./img/about-light-01.webp" style="position: absolute; height: 100%; width: 100%;">
+                </div>
+
+                <div class="wow animate__animated animate__fadeInRight md:w-1/2 ">
+                    <h3 class="uppercase font-medium text-black dark:text-white">
+                        <span class="rounded-full bg-meta mb-4 mr-4 inline-flex pr-5 pl-5 pt-1 pb-1 text-white">NEW</span> 
+                        SaaS Boilerplate for Next.js
+                    </h3>
+
+                    <h2 class="relative mb-6 text-4xl font-bold text-black dark:text-white xl:text-hero">A Complete Solution for
+                        <span class="mt-2 relative inline-block before:absolute before:bottom-0.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">SaaS Startup</span>
+                    </h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                    <div class="flex items-center mt-5">
+                        <div class="flex h-15 w-15 items-center justify-center pd-2 rounded-full border border-gray-200">
+                            <p class="text-metatitle2 font-semibold text-black dark:text-white">01</p>
+                        </div>
+                        <div class="ml-5">
+                            <p class="mb-0.5 text-metatitle2 text-black dark:text-white">Mailchimp for Newsletter Emails + SMTP for <br> Transactional Emails</p>
+                            <p>Ut ultricies lacus non fermentum ultrices.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mt-5">
+                        <div class="flex h-15 w-15 items-center justify-center pd-2 rounded-full border border-gray-200">
+                            <p class="text-metatitle2 font-semibold text-black dark:text-white">02</p>
+                        </div>
+                        <div class="ml-5">
+                            <p class="mb-0.5 text-metatitle2 text-black dark:text-white">Algolia Integration for Site Search</p>
+                            <p>consectetur adipiscing elit fermentum ultricies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- INTERGRATIONS -->
-    <section class="intergrations"></section>
+    <section id="intergrations" class="flex overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+        <div class="padding-custom mx-auto max-w-[1390px] overflow-hidden px-4 md:px-8 2xl:px-0">
+            <div class="flex items-center gap-8rem lg:gap-32.5">
+                <div class="wow animate__animated animate__fadeInLeft md:w-1/2">
+                    <h3 class="font-medium uppercase text-black dark:text-white">Launch Your SaaS Fast</h3>
+                    <h2 class="mt-2 relative mb-6 text-4xl font-bold text-black dark:text-white xl:text-hero">Packed with All Essential
+                        <span class="relative ml-2.5 inline-block before:absolute before:bottom-0.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">Integrations</span>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                    <div>
+                        <a href="#" class="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary">
+                            <span class="duration-300 group-hover:pr-2">Know More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="wow animate__animated animate__fadeInRight relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2">
+                    <img src="./img/about-light-02.svg" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative pb-20 pt-18.5 lg:pb-22.5">
+        <div class="mx-auto max-w-[1390px] overflow-hidden px-4 md:px-8 2xl:px-0 padding-custom">
+
+            <!-- Tabs -->
+            <div class="animate__animated animate__fadeInDown wow flex justify-around w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                id="feature-tabs" data-tabs-toggle="#feature-tabs-content" role="tablist">
+
+                <!-- Tab 1 -->
+                <button id="tab-01" data-tabs-target="#content-01" type="button" role="tab" 
+                class="relative flex w-full items-center gap-4 px-6 py-4 md:w-auto border-b-5 border-transparent aria-selected:border-blue-600 aria-selected:text-blue-600"
+                aria-selected="true">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full outline outline-gray-200">
+                        <p class="font-medium text-black dark:text-white">01</p>
+                    </div>
+                    <span class="text-sm font-medium text-black dark:text-white">Clean User Interface</span>
+                </button>
+
+                <!-- Tab 2 -->
+                <button id="tab-02" data-tabs-target="#content-02" type="button" role="tab" 
+                class="relative flex w-full items-center gap-4 px-6 py-4 md:w-auto border-b-5 border-transparent aria-selected:border-blue-600 aria-selected:text-blue-600">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full outline outline-gray-200">
+                        <p class="font-medium text-black dark:text-white">02</p>
+                    </div>
+                    <span class="text-sm font-medium text-black dark:text-white">Essential Business Pages</span>
+                </button>
+
+                <!-- Tab 3 -->
+                <button id="tab-03" data-tabs-target="#content-03" type="button" role="tab" 
+                class="relative flex w-full items-center gap-4 px-6 py-4 md:w-auto border-b-5 border-transparent aria-selected:border-blue-600 aria-selected:text-blue-600">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full outline outline-gray-200">
+                        <p class="font-medium text-black dark:text-white">03</p>
+                    </div>
+                    <span class="text-sm font-medium text-black dark:text-white">Fully Functional Integrations</span>
+                </button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="feature-tabs-content" class="animate__animated animate__fadeInDown wow mx-auto max-w-[1154px] mt-10">
+
+                <!-- Content 1 -->
+                <div id="content-01" role="tabpanel" aria-labelledby="tab-01">
+                    <div class="flex items-center gap-8 lg:gap-20">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white">Solid UI with Solid <br> Features.</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices.</p>
+                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img src="./img/features-light-01.webp" class="absolute inset-0 h-full w-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 2 -->
+                <div id="content-02" class="hidden" role="tabpanel" aria-labelledby="tab-02">
+                    <div class="flex items-center gap-8 lg:gap-20">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white">Pages and UI Components <br> You Need for a SaaS.</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices.</p>
+                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img src="./img/features-light-01.webp" class="absolute inset-0 h-full w-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 3 -->
+                <div id="content-03" class="hidden" role="tabpanel" aria-labelledby="tab-03">
+                    <div class="flex items-center gap-8 lg:gap-20">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white">Functional Blog, DB, Auth <br> and Many More</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices.</p>
+                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img src="./img/features-light-01.webp" class="absolute inset-0 h-full w-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- STATISTICS -->
-    <section class="statistics"></section>
+    <section id="statistics" class="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
+        <div class=" relative z-1 mx-auto max-w-[1390px] rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] xl:py-27.5">
+            <img src="./img/shape-04.webp" alt="" class="absolute -left-15 -top-25 -z-1 lg:left-0">
+            <img src="./img/shape-05.webp" alt="" class="absolute -right-15 -bottom-25 -z-1 lg:right-0">
+            <div class="animate__animated animate__fadeInDown wow mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2">
+                <h2 class="mb-4 whitespace-nowrap text-5xl font-bold text-black dark:text-white xl:text-sectiontitle3">Trusted by Global Companies.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 lg:gap-42.5">
+                <div class="wow animate__animated animate__fadeInDown text-center mr-9" style="animation-delay: 0.5s">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">500K</h3>
+                    <p class="text-lg lg:text-para2">World Wide Clients</p>
+                </div>
+
+                <div class="wow animate__animated animate__fadeInDown animate__delay-1s text-center mr-9">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">1M+</h3>
+                    <p class="text-lg lg:text-para2">Downloads</p>
+                </div>
+
+                <div class="wow animate__animated animate__fadeInDown text-center mr-9" style="animation-delay: 1.5s">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">865</h3>
+                    <p class="text-lg lg:text-para2">Winning Award</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="animate__animated animate__fadeInDown wow mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+            <div class="mx-auto text-center">
+                <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <p class="text-sectiontitle font-medium text-black dark:text-white">INTEGRATIONS</p>
+                </div>
+                <h2 class="text-black font-bold mx-auto text-5xl mb-4">Packed with all the key <br> integrations you need</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+
+            <div class="mx-auto mt-15 max-w-[1154px] px-4 md:px-8 xl:mt-20 xl:px-0">
+                <div class="flex flex-wrap justify-around gap-y-10">
+                    <div class="w-1/6">
+                        <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-md">
+                            <img src="./img/brand-07.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-md">
+                            <img src="./img/brand-08.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="h-[11px] w-[11px] rounded-full bg-[#FFDB26]">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-md">
+                            <img src="./img/brand-09.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="h-[11px] w-[11px] rounded-full bg-[#62E888]">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-md">
+                            <img src="./img/brand-10.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="h-[20px] w-[20px] rounded-full bg-[#EF5C00]">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-md">
+                            <img src="./img/brand-11.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="h-[15px] w-[15px] rounded-full bg-[#016BFF]">
+                        </div>
+                    </div>
+
+                    <div class="w-1/6">
+                        <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-md">
+                            <img src="./img/brand-12.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- JOIN US -->
-    <section class="JoinUs"></section>
+    <section id="JoinUs" class="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
+        <div class="mx-auto max-w-[1390px] rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0 padding-custom">
+            <div class="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
+                <div class="animate__animated animate__fadeInLeft wow mt-10 max-w-[70%] lg:w-1/2">
+                    <h2 class="ml-10 mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">Join With Us Today & Increase <br> Your Productivity</h2>
+                    <p class="ml-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+                </div>
+                <div class="animate__animated animate__fadeInRight wow mt-10 max-w-[45%] lg:w-1/2">
+                    <div class="flex items-center justify-end xl:justify-between">
+                        <img src="./img/shape-06.webp" alt="" style="width: 300px; height: 300px;">
+                        <a href="https://solid.nextjstemplates.com/signup" class="ml-20 inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black">Sign up free
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex overflow-hidden">
+        <div class="w-full max-w-[1235px] mx-auto xl:px-0 padding-custom">
+            <div class="flex justify-around items-center gap-8rem lg:gap-32.5">
+                <!-- LEFT -->
+                <div class="animate__animated animate__fadeInLeft wow relative mx-auto block md:w-1/2">
+                    <h3 class="font-medium uppercase text-black dark:text-white">OUR FAQS</h3>
+                    <h2 class="mt-2 relative mb-6 text-5xl font-bold text-black dark:text-white xl:text-hero">Frequently Asked<br> 
+                        <span class="mt-2 relative inline-block before:absolute before:bottom-0.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">Questions</span></h2>
+                    <div>
+                        <a href="#" class="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary">
+                            <span class="duration-300 group-hover:pr-2">Know More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="animate__animated animate__fadeInRight wow md:w-1/2">   
+                    <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-black-500 dark:text-black-400">
+                        <h2 id="accordion-flush-heading-1">
+                            <button type="button" class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-black-500 border-b border-gray-200 dark:border-gray-700 dark:text-black-400 gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                            <span class="text-black">Lorem ipsum dolor sit amet, consectetur</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                            <div class="py-5 px-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-flush-heading-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-black-500 border-b border-gray-200 dark:border-gray-700 dark:text-black-400 gap-3" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                            <span class="text-black">Lorem ipsum dolor sit amet, consectetur</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                            <div class="py-5 px-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-flush-heading-3">
+                            <button type="button" class="flex items-center justify-between w-full py-5 px-5 font-medium rtl:text-right text-black-500 border-b border-gray-200 dark:border-gray-700 dark:text-black-400 gap-3" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                            <span class="text-black">Lorem ipsum dolor sit amet, consectetur</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                            <div class="py-5 px-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.</p>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials"></section>
+    <section id="testimonials" class="animate__animated animate__fadeInDown wow overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
+        <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+            <div class="mx-auto text-center">
+                <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <p class="text-sectiontitle font-medium text-black dark:text-white">TESTIMONIALS</p>
+                </div>
+                <h2 class="text-black font-bold mx-auto text-5xl mb-4">Client’s Testimonials</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 slider flex mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0">
+                <div style="width: 592.5px; margin-right: 50px;">
+                    <div class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
+                        <div class="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
+                            <div>
+                                <h3 class="mb-1.5 text-metatitle3 text-black dark:text-white">Devid Smith</h3>
+                                <p>Founter @democompany</p>
+                            </div>
+                            <img src="./img/user-01.webp" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                    </div>
+                </div>
+
+                <div style="width: 592.5px; margin-right: 50px;">
+                    <div class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
+                        <div class="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
+                            <div>
+                                <h3 class="mb-1.5 text-metatitle3 text-black dark:text-white">Jhon Abraham</h3>
+                                <p>Founter @democompany</p>
+                            </div>
+                            <img src="./img/user-02.webp" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                    </div>
+                </div>
+
+                <div style="width: 592.5px; margin-right: 50px;">
+                    <div class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
+                        <div class="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
+                            <div>
+                                <h3 class="mb-1.5 text-metatitle3 text-black dark:text-white">Devid Smith</h3>
+                                <p>Founter @democompany</p>
+                            </div>
+                            <img src="./img/user-01.webp" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                    </div>
+                </div>
+
+                <div style="width: 592.5px; margin-right: 50px;">
+                    <div class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
+                        <div class="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
+                            <div>
+                                <h3 class="mb-1.5 text-metatitle3 text-black dark:text-white">Jhon Abraham</h3>
+                                <p>Founter @democompany</p>
+                            </div>
+                            <img src="./img/user-02.webp" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- PRICING -->
-    <section class="pricing"></section>
+    <section id="pricing" class="animate__animated animate__fadeInDown wow overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-20">
+        <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+            <div class="mx-auto text-center">
+                <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <p class="text-sectiontitle font-medium text-black dark:text-white">PRICING PLANS</p>
+                </div>
+                <h2 class="text-black font-bold mx-auto text-5xl mb-4">Simple Pricing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 flex justify-around gap-8 relative mx-auto mt-15 max-w-[1207px] px-4 md:px-8 xl:mt-20 xl:px-0">
+            <div class="w-full max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-10 dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex items-baseline">
+                    <span class="text-5xl font-extrabold text-black tracking-tight">$ 100</span>
+                    <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+                </div>
+                <h5 class="mt-10 mb-3 text-xl font-medium text-black">Small Pack</h5>
+                <p>Lorem ipsum dolor sit amet, <br> consec adipisicing elit.</p>
+                <ul role="list" class="space-y-5 my-7 mt-9 border-t border-gray-300 pb-12.5 pt-9 dark:border-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-base font-normal leading-tight text-black">300 GB Storage</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-black">Unlimited Photos and Videos</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Exclusive Support</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Custom Branding Strategy</span>
+                    </li>
+                    <li class="flex">
+                        <a href="https://checkout.stripe.com/c/pay/cs_test_a1bWUMaIRlGH7oIhg7fnTezMGRtuLJtneofubQ8ESkWbjByoJdEujxYdSZ#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRLVGxyVklxQmFVU21CSWBUUWFRYDxzS11Edm99MjVVMDVUYEdIV2tmX2wyZ3VLVlFrdjZGREAxfFJCNWJ%2FQU0za2BtRFdOdkpAdmRcSkhDfUl8Q01RYXQ1NTRtblNGTlc1JyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJjU1MT1jYycpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" class="group mt-7.5 inline-flex items-center gap-2.5 text-blue-500 dark:text-blue-400 hover:text-primary dark:text-white dark:hover:text-primary">
+                            <span class="duration-300 group-hover:pr-2">Get the Plan</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="relative w-full max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-10 dark:bg-gray-800 dark:border-gray-700">
+                <div class=" uppercase absolute -right-3.5 top-9 -rotate-90 rounded-bl-full rounded-tl-full bg-primary px-4 py-1 text-white bg-blue-500">popular</div>
+                <div class="flex items-baseline">
+                    <span class="text-5xl font-extrabold text-black tracking-tight">$ 200</span>
+                    <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+                </div>
+                <h5 class="mt-10 mb-3 text-xl font-medium text-black">Medium Pack</h5>
+                <p>Lorem ipsum dolor sit amet, <br> consec adipisicing elit.</p>
+                <ul role="list" class="space-y-5 my-7 mt-9 border-t border-gray-300 pb-12.5 pt-9 dark:border-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-base font-normal leading-tight text-black">300 GB Storage</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-black">Unlimited Photos and Videos</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-black">Exclusive Support</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Custom Branding Strategy</span>
+                    </li>
+                    <li class="flex">
+                        <a href="https://checkout.stripe.com/c/pay/cs_test_a1YcJlNu4aXDL314nJoIyZOe7TFtQP3lIizYh9pkJ4v4CVS9QJHFeFFpIp#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRLVGxyVklxQmFVU21CSWBUUWFRYDxzS11Edm99MjVVMDVUYEdIV2tmX2wyZ3VLVlFrdjZGREAxfFJCNWJ%2FQU0za2BtRFdOdkpAdmRcSkhDfUl8Q01RYXQ1NTRtblNGTlc1JyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJjU1MT1jYycpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" 
+                           class="group mt-7.5 inline-flex items-center gap-2.5 text-blue-500 dark:text-blue-400 hover:text-primary dark:text-white dark:hover:text-primary">
+                            <span class="duration-300 group-hover:pr-2">Get the Plan</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w-full max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-10 dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex items-baseline">
+                    <span class="text-5xl font-extrabold text-black tracking-tight">$ 300</span>
+                    <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+                </div>
+                <h5 class="mt-10 mb-3 text-xl font-medium text-black">Large Pack</h5>
+                <p>Lorem ipsum dolor sit amet, <br> consec adipisicing elit.</p>
+                <ul role="list" class="space-y-5 my-7 mt-9 border-t border-gray-300 pb-12.5 pt-9 dark:border-gray-600">
+                    <li class="flex items-center">
+                        <span class="text-base font-normal leading-tight text-black">300 GB Storage</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-black">Unlimited Photos and Videos</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-black">Exclusive Support</span>
+                    </li>
+                    <li class="flex">
+                        <span class="text-base font-normal leading-tight text-black">Custom Branding Strategy</span>
+                    </li>
+                    <li class="flex">
+                        <a href="https://checkout.stripe.com/c/pay/cs_test_a1DHDjBDkS6k2XiDwmBaXGC2BUsGUPzggad3p4EyrPjR0E5e2qb151Ercv#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRLVGxyVklxQmFVU21CSWBUUWFRYDxzS11Edm99MjVVMDVUYEdIV2tmX2wyZ3VLVlFrdjZGREAxfFJCNWJ%2FQU0za2BtRFdOdkpAdmRcSkhDfUl8Q01RYXQ1NTRtblNGTlc1JyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJjU1MT1jYycpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" 
+                           class="group mt-7.5 inline-flex items-center gap-2.5 text-blue-500 dark:text-blue-400 hover:text-primary dark:text-white dark:hover:text-primary">
+                            <span class="duration-300 group-hover:pr-2">Get the Plan</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!-- MESSAGE -->
     <section id="Message" class="overflow-hidden">
@@ -686,6 +1191,33 @@
     <script src="./libs/WOW-master/dist/wow.min.js"></script>
     <script>
         new WOW().init();
+    </script>
+
+    <!-- SLICK SLIDER -->
+    <script src="./libs/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".slider").slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+
+            });
+
+            // Bắt sự kiện click vào dot
+            $(".slider").on("afterChange", function(event, slick, currentSlide){
+            // Nếu đang ở dot cuối (vd: index 2 với 3 dots)
+            if (currentSlide === slick.slideCount - slick.options.slidesToShow) {
+                // Sau khi dừng 1 chút thì quay lại dot 0
+                setTimeout(function(){
+                    slick.slickGoTo(0); // nhảy về slide đầu
+                    }, 2000); // quay lại sau 2 giây, bạn chỉnh theo ý
+            }
+            });
+        });
     </script>
 </body>
 
