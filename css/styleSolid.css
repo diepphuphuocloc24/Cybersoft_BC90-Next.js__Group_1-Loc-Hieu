@@ -174,3 +174,32 @@ a {
   visibility: visible;
   opacity: 1;
 }
+
+.bg-meta {
+    --tw-bg-opacity: 1;
+    background-color: rgb(32 197 168 / var(--tw-bg-opacity));
+}
+
+.before\:bg-titlebg:before {
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(173 255 248 / var(--tw-bg-opacity));
+}
+
+.before\:bg-titlebg2:before {
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 234 194 / var(--tw-bg-opacity));
+}
+
+.before\:bg-primary:before {
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 107 255 / var(--tw-bg-opacity));
+    transform: translateX(7px);
+}
+
+.bg-zumthor {
+  background-color: rgb(203, 219, 246, 0.5);
+}
+
