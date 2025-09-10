@@ -175,6 +175,16 @@ a {
   opacity: 1;
 }
 
+
+button[aria-expanded="true"] .fa-plus::before {
+  content: "\f068";
+}
+
+.hover\:text-primary:hover {
+    --tw-text-opacity: 1;
+    color: rgb(0 107 255 / var(--tw-text-opacity));
+}
+
 .bg-meta {
     --tw-bg-opacity: 1;
     background-color: rgb(32 197 168 / var(--tw-bg-opacity));
