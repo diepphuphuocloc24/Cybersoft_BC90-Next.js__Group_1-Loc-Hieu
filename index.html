@@ -68,7 +68,7 @@
                     <ul
                         class="flex sm:flex-col xl:flex-row font-medium px-4 sm:py-10 xl:py-0 sm:border-gray-50 xl:border-0 rounded-lg bg-white xl:ml-27">
                         <li><a href="#"
-                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500 active:text-blue-500"
+                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500"
                                 aria-current="page">Home</a>
                         </li>
                         <li><a href="#features"
@@ -1279,18 +1279,27 @@
     </script>
 
     <script>
-        const headerTablet = document.getElementById("main-header");
+        const currentLocation = window.location.href;
+        const navLinks = document.querySelectorAll("#navbar-cta nav ul li a");
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                headerTablet.classList.remove("sm:py-6");
-                headerTablet.classList.add("sm:py-4", "shadow-md", "border-b", "border-gray-200");
+        let activeFound = false;
+
+        navLinks.forEach(link => {
+            if (link.href === currentLocation) {
+                link.classList.add("text-blue-500");
+                activeFound = true;
             } else {
-                headerTablet.classList.add("sm:py-6");
-                headerTablet.classList.remove("sm:py-4", "shadow-md", "border-b", "border-gray-200");
+                link.classList.remove("text-blue-500");
             }
         });
+
+        // Nếu không có link nào match, thì mặc định active Home
+        if (!activeFound) {
+            const homeLink = document.querySelector("#navbar-cta nav ul li a[href='#']");
+            if (homeLink) homeLink.classList.add("text-blue-500");
+        }
     </script>
+
 
     <!-- JQUERY JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
