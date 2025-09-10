@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BT Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate</title>
+    <title>Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate</title>
     <meta name="description" content="This is Home for Solid Pro">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" sizes="16x16">
     <meta name="next-size-adjust">
@@ -53,7 +53,7 @@
 <body>
     <!-- HEADER -->
     <header id="main-header"
-        class="header w-full left-0 top-0 z-10 fixed bg-white xl:py-9 sm:py-6 transition-all duration-500 animate__animated animate__fadeIn">
+        class="header w-full left-0 top-0 z-10 !fixed bg-white xl:py-9 sm:py-6 transition-all duration-500 animate__animated animate__fadeIn">
         <div class="flex flex-wrap mx-auto max-w-[1390px] items-center justify-between padding-custom 2xl:px-0">
 
             <!-- LOGO -->
@@ -68,16 +68,16 @@
                     <ul
                         class="flex sm:flex-col xl:flex-row font-medium px-4 sm:py-10 xl:py-0 sm:border-gray-50 xl:border-0 rounded-lg bg-white xl:ml-27">
                         <li><a href="#"
-                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500 text-blue-500"
+                                class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500 active:text-blue-500"
                                 aria-current="page">Home</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="#features"
                                 class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Features</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="#blogs"
                                 class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Blog</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="https://solid.nextjstemplates.com/docs"
                                 class="block sm:pb-5 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Docs</a>
                         </li>
 
@@ -89,31 +89,31 @@
                                 <i class="fa-solid fa-chevron-down text-[10px] ml-3"></i>
                             </button>
                             <div
-                                class="header__dropdown__item absolute top-0 -left-3 sm:!mt-8 z-10 bg-white rounded-lg shadow-lg w-62">
+                                class="header__dropdown__item absolute top-0 -left-3 sm:!mt-8 z-10 bg-white rounded-lg shadow-lg xl:w-62 sm:w-full">
                                 <ul class="sm:py-2 xl:py-4 xl:px-3 text-sm dropdown">
-                                    <li><a href="#"
+                                    <li><a href="#blogs"
                                             class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Blog
                                             Grid</a></li>
-                                    <li><a href="#"
+                                    <li><a href="https://solid.nextjstemplates.com/auth/signin"
                                             class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
                                             In</a></li>
-                                    <li><a href="#"
+                                    <li><a href="https://solid.nextjstemplates.com/auth/signup"
                                             class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Sign
                                             Up</a></li>
-                                    <li><a href="#"
+                                    <li><a href="https://solid.nextjstemplates.com/docs"
                                             class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Docs</a>
                                     </li>
-                                    <li><a href="#"
+                                    <li><a href="https://solid.nextjstemplates.com/support"
                                             class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">Support</a>
                                     </li>
-                                    <li><a href="#"
+                                    <li><a href="https://solid.nextjstemplates.com/error"
                                             class="block px-4 py-2 hover:text-blue-500 transition-all duration-500 text-[16px]">404</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
-                        <li><a href="#"
+                        <li><a href="https://solid.nextjstemplates.com/support"
                                 class="block sm:py-2 xl:py-0 px-3 xl:mr-4 rounded-sm hover:text-blue-500 transition-all duration-500">Support</a>
                         </li>
                     </ul>
@@ -137,9 +137,10 @@
                             </a>
                         </li>
 
-                        <li class="ml-7 hover:text-blue-500 transition-all duration-500"><a href="#">Sign In</a></li>
+                        <li class="ml-7 hover:text-blue-500 transition-all duration-500"><a
+                                href="https://solid.nextjstemplates.com/auth/signin">Sign In</a></li>
                         <li class="ml-7">
-                            <a href="#"
+                            <a href="https://solid.nextjstemplates.com/auth/signup"
                                 class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-full px-7.5 py-3 text-center transition-all duration-500">
                                 Sign Up</a>
                         </li>
@@ -177,7 +178,7 @@
                         🔥 Solid - A Complete SaaS Starter Template for SaaS
                     </h2>
                     <h1
-                        class="md:w-[50%] lg:w-full xl:w-[85%] mb-5 pr-16 tracking-wide xl:text-[44px] sm:text-3xl xl:leading-[58px] font-bold text-[rgb(24,28,49)] xl:text-hero">
+                        class="md:w-[50%] lg:w-full xl:w-[85%] mb-5 pr-16 tracking-wide xl:text-[44px] sm:text-3xl xl:leading-[58px] font-bold text-[rgb(24,28,49)] dark:text-white xl:text-hero">
                         Robust SaaS
                         Boilerplate and Starter
                         for
@@ -358,7 +359,8 @@
                             <p class="text-[20px] leading-[32px] text-metatitle2 font-semibold text-black">01</p>
                         </div>
                         <div class="ml-5">
-                            <p class="text-[20px] leading-[32px] mb-0.5 text-metatitle2 text-black">Mailchimp for Newsletter Emails
+                            <p class="text-[20px] leading-[32px] mb-0.5 text-metatitle2 text-black">Mailchimp for
+                                Newsletter Emails
                                 + SMTP <br> for Transactional Emails</p>
                             <p>Ut ultricies lacus non fermentum ultrices.</p>
                         </div>
@@ -370,7 +372,8 @@
                             <p class="text-[20px] leading-[32px] text-metatitle2 font-semibold text-black">02</p>
                         </div>
                         <div class="ml-5">
-                            <p class="text-[20px] leading-[32px] mb-0.5 text-metatitle2 text-black">Algolia Integration for Site
+                            <p class="text-[20px] leading-[32px] mb-0.5 text-metatitle2 text-black">Algolia Integration
+                                for Site
                                 Search</p>
                             <p>consectetur adipiscing elit fermentum ultricies.</p>
                         </div>
@@ -457,9 +460,11 @@
                             <h2 class="mb-7 text-[40px] leading-[52px] font-bold text-black">Solid UI
                                 with Solid <br>
                                 Features.</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies <br> lacus
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies <br>
+                                lacus
                                 non fermentum ultrices. Fusce consectetur le.</p>
-                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec <br> finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec <br> finibus sagittis.
+                                Nulla ligula nunc egestas ut.</p>
                         </div>
                         <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
                             <img src="./img/features-light-01.webp" class="absolute inset-0 h-full w-full object-cover">
@@ -474,9 +479,11 @@
                             <h2 class="mb-7 text-[40px] leading-[52px] font-bold text-black">Pages and
                                 UI Components <br>
                                 You Need for a SaaS.</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies <br> lacus
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies <br>
+                                lacus
                                 non fermentum ultrices. Fusce consectetur le.</p>
-                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec <br> finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec <br> finibus sagittis.
+                                Nulla ligula nunc egestas ut.</p>
                         </div>
                         <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
                             <img src="./img/features-light-01.webp" class="absolute inset-0 h-full w-full object-cover">
@@ -492,9 +499,11 @@
                                 Blog, DB, Auth
                                 <br> and Many More
                             </h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies <br> lacus
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies <br>
+                                lacus
                                 non fermentum ultrices. Fusce consectetur le.</p>
-                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec <br> finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                            <p>Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec <br> finibus sagittis.
+                                Nulla ligula nunc egestas ut.</p>
                         </div>
                         <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
                             <img src="./img/features-light-01.webp" class="absolute inset-0 h-full w-full object-cover">
@@ -506,34 +515,36 @@
     </section>
 
     <!-- STATISTICS -->
-    <section id="statistics" class="px-4 py-20 lg:py-22.5 2xl:px-0">
+    <section id="statistics" class="padding-custom mx-auto py-20 lg:py-22.5 2xl:px-0">
         <div
-            class=" relative z-1 mx-auto max-w-[1390px] rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] xl:py-27.5">
-            <img src="./img/shape-04.webp" alt="" class="w-[335px] h-[385px] absolute -left-15 -top-25 -z-1 lg:left-0">
-            <img src="./img/shape-05.webp" alt="" class="w-[132px] h-[132px] absolute -right-15 -bottom-1 -z-1 lg:right-0">
+            class="relative z-1 mx-auto max-w-[1390px] rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5">
+            <img src="./img/shape-04.webp" alt="" class="w-[335px] h-[385px] absolute -left-15 -top-25 lg:left-0 -z-1">
+            <img src="./img/shape-05.webp" alt="" class="w-[132px] h-[132px] absolute bottom-0 right-0 -z-1">
+
             <div
                 class="animate__animated animate__fadeInDown wow mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2">
-                <h2 class="mb-4 whitespace-nowrap text-5xl font-bold text-black xl:text-[44px] xl:leading-[55px]">
+                <h2 class="mb-4 whitespace-nowrap sm:text-3xl font-bold text-black xl:text-[44px] xl:leading-[55px]">
                     Trusted by Global Companies.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec vitae
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec
+                    vitae
                     tortor lacus. Phasellus aliquam ante in maximus.</p>
             </div>
 
             <div class="flex flex-wrap justify-center sm:gap-8 lg:gap-42.5">
                 <div class="wow animate__animated animate__fadeInDown text-center mr-9" style="animation-delay: 0.5s">
-                    <h3 class="mb-2.5 text-[44px] leading-[55px] font-bold text-black xl:text-[44px] xl:leading-[55px]">
+                    <h3 class="mb-2.5 sm:text-3xl font-bold text-black xl:text-[44px] xl:leading-[55px]">
                         500K</h3>
                     <p class="text-lg lg:text-[1.125rem] lg:leading-[1.75rem]">World Wide Clients</p>
                 </div>
 
                 <div class="wow animate__animated animate__fadeInDown animate__delay-1s text-center mr-9">
-                    <h3 class="mb-2.5 text-[44px] leading-[55px] font-bold text-black xl:text-[44px] xl:leading-[55px]">
+                    <h3 class="mb-2.5 sm:text-3xl font-bold text-black xl:text-[44px] xl:leading-[55px]">
                         1M+</h3>
                     <p class="text-lg lg:text-[1.125rem] lg:leading-[1.75rem]">Downloads</p>
                 </div>
 
                 <div class="wow animate__animated animate__fadeInDown text-center mr-9" style="animation-delay: 1.5s">
-                    <h3 class="mb-2.5 text-[44px] leading-[55px] font-bold text-black xl:text-[44px] xl:leading-[55px]">
+                    <h3 class="mb-2.5 sm:text-3xl font-bold text-black xl:text-[44px] xl:leading-[55px]">
                         865</h3>
                     <p class="text-lg lg:text-[1.125rem] lg:leading-[1.75rem]">Winning Award</p>
                 </div>
@@ -544,11 +555,13 @@
     <section>
         <div class="animate__animated animate__fadeInDown wow mx-auto max-w-[1390px] 2xl:px-0">
             <div class="mx-auto text-center">
-                <div
-                    class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                <div class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5">
                     <p class="text-[14px] leading-[22px] text-sectiontitle font-medium text-black">INTEGRATIONS</p>
                 </div>
-                <h2 class="text-black font-bold mx-auto text-[44px] leading-[55px] mb-4">Packed with all the key <br> <span class="inline-block">integrations you need</span></h2>
+                <h2 class="text-black font-bold mx-auto sm:text-3xl xl:text-[44px] xl:leading-[55px] mb-4">
+                    Packed with
+                    all the key integrations you need
+                </h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. <br> Donec vitae
                     tortor lacus. Phasellus aliquam ante in maximus.</p>
             </div>
@@ -658,7 +671,8 @@
                 <!-- LEFT -->
                 <div class="animate__animated animate__fadeInLeft wow relative mx-auto block md:w-[50%]">
                     <h3 class="font-medium uppercase text-black">OUR FAQS</h3>
-                    <h2 class="mt-2 text-[44px] leading[58px] relative mb-6 text-5xl font-bold text-black">Frequently Asked
+                    <h2 class="mt-2 text-[44px] leading[58px] relative mb-6 text-5xl font-bold text-black">Frequently
+                        Asked
                         <span
                             class="mt-2 relative inline-block before:absolute before:bottom-0.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">Questions</span>
                     </h2>
@@ -681,7 +695,8 @@
                                 class="flex items-center justify-between w-full py-6 px-5 font-medium rtl:text-right text-black border-b border-gray-200 dark:border-gray-700 dark:text-black-400 gap-3"
                                 data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
                                 aria-controls="accordion-flush-body-1">
-                                <span class="text-[18px] leading-[26px] text-black">Lorem ipsum dolor sit amet, consectetur</span>
+                                <span class="text-[18px] leading-[26px] text-black">Lorem ipsum dolor sit amet,
+                                    consectetur</span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <i class="fa-solid fa-plus"></i>
@@ -700,7 +715,8 @@
                                 class="flex items-center justify-between w-full py-6 px-5 font-medium rtl:text-right text-black border-b border-gray-200 dark:border-gray-700 dark:text-black-400 gap-3"
                                 data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
                                 aria-controls="accordion-flush-body-2">
-                                <span class="text-[18px] leading-[26px] text-black">Lorem ipsum dolor sit amet, consectetur</span>
+                                <span class="text-[18px] leading-[26px] text-black">Lorem ipsum dolor sit amet,
+                                    consectetur</span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <i class="fa-solid fa-plus"></i>
@@ -719,7 +735,8 @@
                                 class="flex items-center justify-between w-full py-6 px-5 font-medium rtl:text-right text-black border-b border-gray-200 dark:border-gray-700 dark:text-black-400 gap-3"
                                 data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
                                 aria-controls="accordion-flush-body-3">
-                                <span class="text-[18px] leading-[26px] text-black">Lorem ipsum dolor sit amet, consectetur</span>
+                                <span class="text-[18px] leading-[26px] text-black">Lorem ipsum dolor sit amet,
+                                    consectetur</span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <i class="fa-solid fa-plus"></i>
@@ -774,7 +791,8 @@
                         class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:shadow-none">
                         <div class="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
                             <div>
-                                <h3 class="text-[18px] leading[26px] mb-1.5 text-metatitle3 text-black">Jhon Abraham</h3>
+                                <h3 class="text-[18px] leading[26px] mb-1.5 text-metatitle3 text-black">Jhon Abraham
+                                </h3>
                                 <p>Founter @democompany</p>
                             </div>
                             <img src="./img/user-02.webp" alt="">
@@ -804,7 +822,8 @@
                         class="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:shadow-none">
                         <div class="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
                             <div>
-                                <h3 class="text-[18px] leading[26px] mb-1.5 text-metatitle3 text-black">Jhon Abraham</h3>
+                                <h3 class="text-[18px] leading[26px] mb-1.5 text-metatitle3 text-black">Jhon Abraham
+                                </h3>
                                 <p>Founter @democompany</p>
                             </div>
                             <img src="./img/user-02.webp" alt="">
@@ -983,8 +1002,8 @@
                             </div>
 
                             <!-- CHECK BOX -->
-                            <div class="flex flex-wrap gap-4 xl:justify-between ">
-                                <div class="mb-4 flex md:mb-0 w-[60%]">
+                            <div class="flex sm:flex-wrap xl:flex-nowrap gap-4 xl:justify-between">
+                                <div class="mb-4 flex md:mb-0 xl:w-[60%] sm:w-full">
                                     <input id="default-checkbox" class="peer sr-only" type="checkbox">
                                     <span
                                         class="group mt-2 mr-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
@@ -992,6 +1011,7 @@
                                     consent
                                     cookie usage in browser
                                 </div>
+
                                 <a href="#"
                                     class="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-6 py-3 font-medium text-white duration-500 ease-in-out hover:bg-gray-700">
                                     Send Message
@@ -1027,7 +1047,7 @@
     </section>
 
     <!-- BLOGS -->
-    <section class="overflow-hidden bg-white">
+    <section id="blogs" class="overflow-hidden bg-white">
         <div class="mx-auto max-w-[1390px] padding-custom py-20 lg:py-25 xl:py-30 pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46 mb-10"
             data-wow-duration="2s" data-wow-delay="0.2s">
             <div class="title sm:w-full lg:w-[50%] mx-auto text-center animate__animated animate__fadeInDown wow">
@@ -1052,13 +1072,15 @@
                     <!-- BLOG ITEMS -->
                     <div
                         class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0px_12px_120px_rgba(45,74,170,0.06)] dark:bg-blacksection">
-                        <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
+                        <a href="https://solid.nextjstemplates.com/blog/exploring-the-mern-stack-powering-modern-web-dev"
+                            class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
                                 class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
                                 src="./img/take-picture-1000x667.png" alt="">
                         </a>
                         <div class="px-4">
-                            <a href="#">
+                            <a
+                                href="solid.nextjstemplates.com/blog/exploring-the-mern-stack-powering-modern-web-development">
                                 <h5
                                     class="mb-3.5 mt-7.5 line-clamp-2 text-lg xl:!text-[24px] xl:!leading-[32px] font-medium text-black hover:text-blue-500 transition-all duration-300 ">
                                     Exploring
@@ -1073,13 +1095,14 @@
 
                     <div
                         class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0px_12px_120px_rgba(45,74,170,0.06)] dark:bg-blacksection">
-                        <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
+                        <a href="https://solid.nextjstemplates.com/blog/best-ui-components-for-modern-websites"
+                            class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
                                 class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
                                 src="./img/UI&UX-970x440.png" alt="">
                         </a>
                         <div class="px-4">
-                            <a href="#">
+                            <a href="https://solid.nextjstemplates.com/blog/best-ui-components-for-modern-websites">
                                 <h5
                                     class="mb-3.5 mt-7.5 line-clamp-2 text-lg xl:!text-[24px] xl:!leading-[32px] font-medium text-black hover:text-blue-500 transition-all duration-300 ">
                                     Best UI components for modern website...</h5>
@@ -1092,13 +1115,15 @@
 
                     <div
                         class="group sm:max-w-full lg:max-w-[31%] bg-white p-4 pb-9 shadow-[0px_12px_120px_rgba(45,74,170,0.06)] dark:bg-blacksection">
-                        <a href="#" class="block aspect-[368/239] overflow-hidden rounded-lg">
+                        <a href="https://solid.nextjstemplates.com/blog/the-power-of-uiux-elevating-digital-experiences"
+                            class="block aspect-[368/239] overflow-hidden rounded-lg">
                             <img loading="lazy" decoding="async" data-nimg="fill"
                                 class="rounded-lg w-full h-full duration-500 group-hover:scale-110"
                                 src="./img/UI&UX-design-970x440.png" alt="">
                         </a>
                         <div class="px-4">
-                            <a href="#">
+                            <a
+                                href="https://solid.nextjstemplates.com/blog/the-power-of-uiux-elevating-digital-experiences">
                                 <h5
                                     class="mb-3.5 mt-7.5 line-clamp-2 text-lg xl:!text-[24px] xl:!leading-[32px] font-medium text-black hover:text-blue-500 transition-all duration-300 ">
                                     The Power of UI/UX: Elevating Digital Ex...</h5>
@@ -1114,7 +1139,8 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark max-w-[1390px]">
+    <footer
+        class="border border-gray-200 border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection max-w-[1390px]">
 
         <!-- FOOTER MAIN -->
         <div class="lg:flex items-center justify-between mx-auto sm:py-25 md:py-20 lg:py-23 padding-custom">
@@ -1136,7 +1162,8 @@
             <div class="md:flex md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12 animate__animated animate__fadeInDown wow"
                 data-wow-duration="2s" data-wow-delay="0.2s">
                 <div class="">
-                    <h4 class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black">
+                    <h4
+                        class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black dark:text-white">
                         Quick
                         Links</h4>
                     <ul>
@@ -1155,7 +1182,8 @@
                 </div>
 
                 <div>
-                    <h4 class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black">
+                    <h4
+                        class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black dark:text-white">
                         Support
                     </h4>
                     <ul>
@@ -1173,7 +1201,8 @@
                 </div>
 
                 <div>
-                    <h4 class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black">
+                    <h4
+                        class="sm:my-6 md:my-8 lg:my-7 text-[24px] leading-[32px] font-medium text-black dark:text-white">
                         Newsletter</h4>
                     <p class="mb-4 w-[90%]">Subscribe to receive future updates</p>
                     <form>
